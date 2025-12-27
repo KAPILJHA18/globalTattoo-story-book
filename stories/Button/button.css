@@ -1,0 +1,60 @@
+/* base button */
+.sb-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* size = medium => your design */
+.sb-button--medium {
+  width: 327px;
+  height: 44px;
+  border-radius: var(--radius-md);      /* e.g. 8px */
+  padding: 0 var(--padding-px-8);       /* horizontal padding token */
+}
+
+/* optional other sizes */
+.sb-button--small {
+  height: 36px;
+  padding: 0 var(--padding-px-6);
+}
+
+.sb-button--large {
+  height: 52px;
+  padding: 0 var(--padding-px-10);
+}
+
+/* variants */
+.sb-button--primary {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  color: #ffffff;
+}
+
+.sb-button--secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* disabled state */
+.sb-button--primary:disabled {
+  background: linear-gradient(99.46deg, #7855ED 5.92%, #524ECC 94.09%);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+  /* optional if you prefer: opacity: 0.6; */
+}
+
+.sb-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sb-button__label {
+  white-space: nowrap;
+}
