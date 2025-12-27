@@ -1,4 +1,3 @@
-// src/stories/Card.stories.js
 import { Card } from './Card';
 
 export default {
