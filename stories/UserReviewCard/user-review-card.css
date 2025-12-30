@@ -1,0 +1,234 @@
+:root {
+  --ur-card-bg: #1f1f23;
+  --ur-card-border-radius: 16px;
+  --ur-card-text-main: #ffffff;
+  --ur-card-text-subtle: #b3b3c0;
+  --ur-card-accent: #a855f7;
+  --ur-card-star-active: #ffc531;
+}
+
+/* container */
+.ur-card {
+  min-width: 375px;
+  /* border-radius: var(--ur-card-border-radius); */
+  background: #111111;
+  /* padding: 20px 16px 12px; */
+  color: var(--ur-card-text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    'Segoe UI', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* header */
+.ur-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 20px 16px 12px;
+}
+
+.ur-card__header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* avatars */
+.ur-card__avatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #ffffff1a;
+}
+
+.ur-card__avatar--small {
+  width: 24px;
+  height: 24px;
+}
+
+/* header text */
+.ur-card__header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ur-card__reviewer {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ur-card__meta {
+  font-size: 11px;
+  color: var(--ur-card-text-subtle);
+}
+
+/* review bubble */
+.ur-card__bubble {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 12px;
+  /* background: #26262c; */
+  border-radius: 12px;
+}
+
+.ur-card__text {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
+
+/* image container */
+.ur-card__image {
+  position: relative;
+  margin-top: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* rating overlay on image top-right */
+.ur-card__image-rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.ur-card__rating-pill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  display: inline-flex;
+  gap: 2px;
+  backdrop-filter: blur(4px);
+}
+
+.ur-card__star {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ur-card__star--active {
+  color: var(--ur-card-star-active);
+}
+
+/* artist row overlay on image bottom */
+.ur-card__artist-row {
+  position: relative;
+  margin-top: -40px;
+  padding: 0 16px 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  top: -30px;
+}
+
+.ur-card__artist-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ur-card__artist-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ur-card__artist-location {
+  font-size: 11px;
+  color: var(--ur-card-text-subtle);
+}
+
+/* share button */
+.ur-card__share {
+  height: 16px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* .ur-card__share:hover {
+  background: rgba(0, 0, 0, 0.7);
+} */
+
+/* pagination dots */
+.ur-card__dots {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  top:-15px
+  /* margin: 12px 0 15px; */
+}
+
+.ur-card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4b4b57;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ur-card__dot--active {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+}
+
+.ur-card__dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* footer actions */
+.ur-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 20px;
+  border-top: 1px solid #2a2a2e;
+}
+
+.ur-card__hero-img {
+  width: 100%;
+}
+.ur-card__footer-btn {
+  border: none;
+  background: transparent;
+  color: var(--ur-card-text-subtle);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.ur-card__footer-btn:hover {
+  color: var(--ur-card-text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ur-card__footer-btn--ghost {
+  color: var(--ur-card-accent);
+}
+
+.ur-card__footer-icon {
+  font-size: 18px;
+}
+
+.ur-card__footer-count {
+  font-size: 12px;
+  font-weight: 500;
+}

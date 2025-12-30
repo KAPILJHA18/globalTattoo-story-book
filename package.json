@@ -3,10 +3,6 @@
   "private": true,
   "homepage": "https://KAPILJHA18.github.io/globalTattoo-story-book",
   "version": "1.0.0",
-  "main": "storybook-static/index.js",
-  "module": "storybook-static/index.esm.js",
-  "types": "storybook-static/index.d.ts",
-  "files": ["storybook-static"],
   "sideEffects": false,
   "scripts": {
     "storybook": "storybook dev -p 6006",
