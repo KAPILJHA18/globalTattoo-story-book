@@ -29,6 +29,11 @@ export default {
         artistName: 'Mike Chen',
         artistLocation: 'San Francisco, CA',
       },
+      {
+        image: 'https://images.pexels.com/photos/2693235/pexels-photo-2693235.jpeg?auto=compress&cs=tinysrgb&w=400',
+        artistName: 'Mike Chen',
+        artistLocation: 'San Francisco, CA',
+      },
     ],
     rating: 5,
     likes: 120,

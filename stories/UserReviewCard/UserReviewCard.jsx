@@ -9,10 +9,10 @@ export const UserReviewCard = ({
     reviewDate,
     reviewTime,
     reviewText,
-    slides,
-    rating,
-    likes,
-    comments,
+    slides=[],
+    rating=5,
+    likes=0,
+    comments=0,
 }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const stars = Array.from({ length: 5 });
@@ -145,11 +145,4 @@ UserReviewCard.propTypes = {
     rating: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
     comments: PropTypes.number.isRequired,
-};
-
-UserReviewCard.defaultProps = {
-    rating: 5,
-    likes: 0,
-    comments: 0,
-    slides: [],
 };
