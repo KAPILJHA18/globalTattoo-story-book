@@ -1,0 +1,200 @@
+:root {
+  --booking-card-bg: #191a1f;
+  --booking-card-border: #343437;
+  --booking-card-radius: 12px;
+  --booking-card-text-main: #ffffff;
+  --booking-card-text-subtle: #B1B9C4;
+  --booking-card-tag-bg: #e5e7eb;
+  --booking-card-tag-text: #111827;
+  --status-pending: #fbbf24;
+  --status-canceled: #f97373;
+  --status-completed: #22c55e;
+}
+
+/* container */
+.booking-card {
+  /* min-width: 360px; */
+  background: var(--booking-card-bg);
+  border-radius: var(--booking-card-radius);
+  border: 1px solid var(--booking-card-border);
+  /* padding: 12px 16px 10px; */
+  color: var(--booking-card-text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    'Segoe UI', sans-serif;
+}
+
+/* top row */
+.booking-card__top {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--booking-card-border);
+  margin-bottom: 10px;
+  padding: 10px 16px;
+}
+
+.booking-card__booking-id {
+  font-size: 12px;
+  color: var(--booking-card-text-subtle);
+}
+
+/* main row */
+.booking-card__main {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+/* left section */
+.booking-card__left {
+  display: flex;
+  gap: 10px;
+}
+
+.booking-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.booking-card__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.booking-card__name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.booking-card__name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+.booking-card__meta {
+  font-size: 10px;
+  line-height: 12px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.booking-card__date {
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--booking-card-text-subtle);
+  margin-bottom: 10px;
+}
+
+/* tag (Mandala / Custom Tattoo) */
+.booking-card__tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  background: var(--booking-card-tag-bg);
+  color: var(--booking-card-tag-text);
+  font-size: 10px;
+  font-weight: 500;
+  cursor: default;
+  height: 24px;
+  line-height: 12px;
+  width: fit-content;
+}
+
+/* right section */
+.booking-card__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* status row */
+.booking-card__status-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.booking-card__status-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--status-pending);
+}
+.status-dot-pending {
+  background: var(--status-pending);
+}
+.status-dot-canceled {
+  background: var(--status-canceled);
+}
+.status-dot-completed {
+  background: var(--status-completed);
+}
+
+/* status label colors */
+.booking-card__status-label {
+  font-weight: 500;
+}
+
+.booking-card__status--pending {
+  color: var(--status-pending);
+}
+
+.booking-card__status--canceled {
+  color: var(--status-canceled);
+}
+
+.booking-card__status--completed {
+  color: var(--status-completed);
+}
+
+/* price */
+.booking-card__price {
+  text-align: right;
+}
+
+.booking-card__currency {
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 2px;
+  font-weight: 600;
+}
+
+.booking-card__amount {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+/* footer */
+.booking-card__footer {
+  /* margin-top: 10px; */
+  display: flex;
+  justify-content: space-between;
+  margin-left: 68px;
+  margin-bottom: 14px;
+  margin-right: 16px;
+}
+
+.booking-card__chat-btn {
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -76,3 +76,12 @@ export const ManyLikes = {
     comments: 89,
   },
 };
+
+export const TattooArtistCard = {
+  args: {
+    likes: 1250,
+    comments: 89,
+    isTattooArtist: true,
+    address: 'New York, USA',
+  },
+};

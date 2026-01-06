@@ -9,10 +9,12 @@ export const UserReviewCard = ({
     reviewDate,
     reviewTime,
     reviewText,
-    slides=[],
-    rating=5,
-    likes=0,
-    comments=0,
+    slides = [],
+    rating = 5,
+    likes = 0,
+    comments = 0,
+    isTattooArtist = false,
+    address,
 }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const stars = Array.from({ length: 5 });
@@ -36,9 +38,12 @@ export const UserReviewCard = ({
                         />
                     </div>
                     <div className="ur-card__header-text">
-                        <div className="ur-card__reviewer">{reviewerName}</div>
+                        <div className="ur-card__reviewer">{reviewerName}
+                            {isTattooArtist && <span className="material-symbols-outlined" style={{ color: '#84CC16', fontSize: 10, marginLeft: '3px' }}>check_circle</span>}
+                        </div>
+
                         <div className="ur-card__meta">
-                            {reviewDate}, {reviewTime}
+                            {address && `${address} `}  {reviewDate}, {reviewTime}
                         </div>
                     </div>
                 </div>
@@ -55,10 +60,11 @@ export const UserReviewCard = ({
                     src={currentSlideData.image}
                     alt={currentSlideData.artistName}
                     className="ur-card__hero-img"
+                    style={isTattooArtist ? {marginBottom: '-10px'} : {}}
                 />
 
                 {/* rating stars overlay on top-right */}
-                <div className="ur-card__image-rating">
+                {!isTattooArtist && <div className="ur-card__image-rating">
                     <div className="ur-card__rating-pill">
                         {stars.map((_, i) => (
                             <span
@@ -71,11 +77,11 @@ export const UserReviewCard = ({
                             </span>
                         ))}
                     </div>
-                </div>
+                </div>}
             </div>
 
             {/* artist row over image bottom */}
-            <div className="ur-card__artist-row">
+            {!isTattooArtist && <div className="ur-card__artist-row">
                 <div className="ur-card__artist-left">
                     <div className="ur-card__avatar ur-card__avatar--small">
                         <img
@@ -91,10 +97,9 @@ export const UserReviewCard = ({
                 </div>
 
                 <button className="ur-card__share" type="button" aria-label="Share">
-                    {/* <image src={rightArrow} alt='Next Slide'/> */}
                     <svg style={{ rotate: '90deg' }} xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-120v-240H120l360-440 360 440H640v240H320Zm80-80h160v-240h111L480-674 289-440h111v240Zm80-240Z" /></svg>
                 </button>
-            </div>
+            </div>}
 
             {/* pagination dots */}
             <div className="ur-card__dots">
@@ -110,9 +115,9 @@ export const UserReviewCard = ({
             </div>
 
             {/* footer actions */}
-            <footer className="ur-card__footer">
+            <footer className="ur-card__footer" style={{ justifyContent: isTattooArtist ? 'flex-start' : 'space-between' }}>
                 <button className="ur-card__footer-btn" type="button">
-                    <span className="ur-card__footer-icon material-symbols-outlined" style={{color:'#F43F5E'}}>favorite</span>
+                    <span className="ur-card__footer-icon material-symbols-outlined" style={{ color: '#F43F5E' }}>favorite</span>
                     <span className="ur-card__footer-count">{likes}</span>
                 </button>
 

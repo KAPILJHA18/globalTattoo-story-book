@@ -165,8 +165,8 @@
   display: flex;
   justify-content: center;
   gap: 9px;
-  top:-15px
-  /* margin: 12px 0 15px; */
+  top:-15px;
+  height: 0;
 }
 
 .ur-card__dot {
