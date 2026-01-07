@@ -1,0 +1,93 @@
+:root {
+  --bn-bg: #202126;
+  --bn-text: #e5e5f0;
+  --bn-text-muted: #9ca0b0;
+  --bn-active: #a855f7;
+}
+
+/* container */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  background: var(--bn-bg);
+}
+
+/* item */
+.bottom-nav__item {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--bn-text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+/* icon */
+.bottom-nav__icon {
+  font-size: 18px;
+}
+
+/* label */
+.bottom-nav__label {
+  font-size: 11px;
+}
+
+/* active state: purple icon + glow + label */
+.bottom-nav__item--active {
+  color: var(--bn-active);
+  position: relative;
+}
+
+.bottom-nav__item--active .bottom-nav__icon {
+  color: var(--bn-active);
+}
+
+.bottom-nav__item--active::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.4), transparent 60%);
+  z-index: -1;
+}
+
+.bottom-nav__icon svg {
+  width: 20px;
+  height: 20px;
+  transition: color 0.2s ease;
+}
+
+.bottom-nav__item--active .bottom-nav__icon {
+  color: #9C7EFF;
+}
+
+.bottom-nav__item--active .bottom-nav__label {
+  color: #9C7EFF;
+}
+
+.bottom-nav__item--active::before {
+  content: '';
+  width: 29px;
+  height: 29px;
+  background: #9C7EFF;
+  filter: blur(14px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.bottom-nav__item--active .bottom-nav__icon {
+  color: #9C7EFF;
+}
+
+.bottom-nav__item--active .bottom-nav__label {
+  color: #9C7EFF;
+}
