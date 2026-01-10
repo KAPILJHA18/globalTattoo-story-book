@@ -1,0 +1,119 @@
+.nb-root {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+
+.nb-left-tabs {
+  background: #202126; 
+  border-radius: 0 78px 0 0;
+  gap: 10px;
+  padding: 18px 40px 18px 20px;
+}
+
+.nb-right-tabs {
+  background: #202126; 
+  border-radius: 78px 0 0 0;
+  gap: 10px;
+  padding: 18px 20px 18px 40px; 
+}
+
+/* curved top background */
+.nb-curve {
+  position: absolute;
+  inset: 0;
+  background: #202126;
+  border-radius: 24px 24px 0 0;
+}
+
+/* tab row */
+.nb-tabs {
+  position: relative;
+  /* z-index: 1; */
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr)  repeat(1, 1fr);
+  align-items: flex-end;
+  /* padding: 20px 18px; */
+}
+
+/* empty column under FAB */
+.nb-spacer {
+  height: 1px;
+}
+
+/* tabs */
+.nb-tab {
+  border: none;
+  background: transparent;
+  color: #B1B9C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.nb-tab__icon {
+  font-size: 20px;
+}
+
+/* inactive */
+.nb-tab__label {
+  color: #9ca0b0;
+}
+
+/* active tab (leftmost in screenshot) */
+.nb-tab--active .nb-tab__icon,
+.nb-tab--active .nb-tab__label {
+  color: #9C7EFF;
+}
+
+.nb-tab--active .nb-tab__icon {
+  position: relative;
+}
+
+.nb-tab--active .nb-tab__icon::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(156, 126, 255, 0.5), transparent 70%);
+  filter: blur(12px);
+  z-index: -1;
+}
+
+/* center floating action button */
+.nb-fab {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 6px solid #202126;
+  background: #9C7EFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.nb-fab__plus {
+  font-size: 26px;
+  color: #ffffff;
+  position: relative;
+  top: 2px;
+}
+
+.nb-tabs-container {
+  display: flex;
+}
